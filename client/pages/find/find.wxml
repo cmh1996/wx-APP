@@ -1,0 +1,71 @@
+<!--pages/find/find.wxml-->
+<view class='container'>
+  <view class='findTop'>
+    <view class='bg'></view>
+    <view class='btnList'>
+      <view class='btnItem' wx:for="{{findBtn}}" wx:key="{{index}}">
+        <image src="{{item.icon}}"/>
+        <text>{{item.text}}</text>
+      </view>
+    </view>
+    <view class='scrollBox'>
+      <scroll-view class="scrollList" scroll-x="{{true}}">
+        <view class="scrollItem" wx:for="{{bannerList}}" wx:key="{{index}}">
+          <image src="{{item.img}}"/>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+
+  <view class='bar'>
+    <view>精选推荐</view>
+  </view>
+
+  <view class='feedList'>
+    <view class='content topic'>
+      <image src='https://img.alicdn.com/imgextra/i4/1807288560/TB2fhezd7fb_uJkHFCcXXXagFXa_!!1807288560-0-wefliggy.jpg_790x10000q40'/>
+      <view class='title'>
+        <view class='text ellipsis'>2018适合带父母旅行的好地方（内附游玩攻略）！</view>
+        <view class='type'>精选</view>
+      </view>
+      <view class="intro ellipsis-two">我们陪伴父母的时间越来越少,不止我们渴望一次说走就走的旅行，父母也一样，抽点时间带他们出去玩玩吧</view>
+    </view>
+
+    <view class='content article'>
+      <view class='title'>
+        <view class='text ellipsis'>为什么这辈子一定要去一次南极为什么这辈子一定要去一次南极为什么这辈子一定要去一次南极</view>
+        <view class='type'>可订</view>
+      </view>
+      <view class='sub'>
+        <image src='https://gw.alicdn.com/imgextra/i3/6000000002416/TB2bAt0XIrHK1JjSszcXXch4VXa_!!2-travel.png_500x500q75.jpg_.webp'/>
+        <view class='ellipsis-four'>南极有一种蓝，诗人和高级的摄影技术都拍不出来的纯净的蓝色，这辈子，一定要亲眼去看看南极有一种蓝，诗人和高级的摄影技术都拍不出来的纯净的蓝色，这辈子，一定要亲眼去看看南极有一种蓝，诗人和高级的摄影技术都拍不出来的纯净的蓝色，这辈子，一定要亲眼去看看南极有一种蓝，诗人和高级的摄影技术都拍不出来的纯净的蓝色，这辈子，一定要亲眼去看看
+        </view>
+      </view>
+      <view class='tips'>
+        <view class='author'>旅行值得买</view>
+        <view class='data'>
+          阅读量 365
+        </view>
+      </view>
+    </view>
+
+    <view class='feed'>
+      <view class='content userFeed' wx:for="{{feedList}}" wx:key="{{index}}">
+        <view class='userInfo'>
+          <image src="{{item.userImg}}"/>
+          <view class='name ellipsis'>{{item.userName}}</view>
+        </view>
+        <view class="intro ellipsis-three">{{item.content}}</view>
+        <view class='imgBox'>
+          <image wx:for="{{item.imgList}}" wx:for-item="imgItem" wx:key="{{imgItem}}" src="{{imgItem}}"/>
+        </view>
+        <view class='tips'>
+          <view class='author'>买家秀</view>
+          <view class='data'>
+            {{item.company}}
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

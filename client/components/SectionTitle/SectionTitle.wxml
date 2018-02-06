@@ -1,0 +1,5 @@
+<!--components/SectionTitle/SectionTitle.wxml-->
+<view class='SectionTitle'>
+  <view style="color:{{color}}">{{title}}</view>
+  <text>更多 ></text>
+</view>

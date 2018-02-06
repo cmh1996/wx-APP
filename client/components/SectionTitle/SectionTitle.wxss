@@ -1,0 +1,17 @@
+/* components/SectionTitle/SectionTitle.wxss */
+.SectionTitle{
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20rpx;
+  background-color: white;
+}
+.SectionTitle view{
+  font-weight: bold;
+  font-size: 34rpx;
+}
+.SectionTitle text{
+  color:#1e1e1e;
+}

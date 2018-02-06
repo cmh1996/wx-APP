@@ -1,0 +1,138 @@
+<!--pages/destination/destination.wxml-->
+<view class='container'>
+  <swiper class='header' indicator-dots="{{true}}" indicator-color="rgba(255,255,255,0.3)" indicator-active-color="#5fca9c"
+    autoplay="{{false}}" duration="500" circular="{{true}}" >
+    <swiper-item class="swiperItem">
+        <image src="https://gw.alicdn.com/imgextra/i3/6000000006527/TB2pmcraNHI8KJjy1zbXXaxdpXa_!!0-travel.jpg_760x760q50.jpg_.webp"/>
+        <view class='placeInfo'>
+          <view class='left'>
+            <text class='name'>深圳</text>
+            <view class='rank'>广东人气第2名</view>
+            <text class='weather'>6 ~ 12℃</text>
+          </view>
+          <view class='right'>
+            <view>精选图库 ></view>
+          </view>
+        </view>
+    </swiper-item>
+    <swiper-item class="normalItem">
+      <image src="https://gw.alicdn.com/imgextra/i4/6000000006745/TB235SueLNZWeJjSZFpXXXjBFXa_!!0-travel.jpg_760x760q50.jpg_.webp"/>
+    </swiper-item>
+  </swiper>
+
+  <view class='content recently'>
+    <text>最近浏览</text>
+    <view>上海</view>
+  </view>
+
+  <view class='content mainSection'>
+    <view class='item top'>
+      <image src='https://gw.alicdn.com/imgextra/i1/6000000004502/TB2jhN.XsrHK1JjSspcXXazgpXa_!!0-travel.jpg_760x760q50.jpg_.webp'/>
+      <view class='tips'>
+        <text>玩法</text>
+        <text>深圳经典线路三日游</text>
+      </view>
+    </view>
+    <view class='bottom'>
+      <view class='item left'>
+        <image src='https://gw.alicdn.com/imgextra/i3/488718576/TB2.s_Ql8DH8KJjSszcXXbDTFXa_!!488718576-2-wefliggy.png_250x250q50.jpg_.webp'/>
+        <view class='tips'>
+          <text>榜单</text>
+          <text>排在前面的景点你都去过了吗</text>
+        </view>
+      </view>
+      <view class='item right'>
+        <image src='https://gw.alicdn.com/imgextra/i2/6000000002036/TB29p.PX_AKL1JjSZFCXXXFspXa_!!0-travel.jpg_760x760q50.jpg_.webp'/>
+        <view class='tips'>
+          <text>游记</text>
+          <text>看看达人怎么玩</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class='section hot'>
+    <section-title color="#fcc000" title="热门必去"/>
+    <view class='typeList'>
+      <view class="{{curHotTypeIndex===index?'selected':''}}" wx:for="{{hotType}}" wx:key="{{index}}" bindtap='selectHotType' data-index='{{index}}'>
+        {{item}}
+      </view>
+    </view>
+    <view class='scrollBox'>
+      <scroll-view class="scrollList" scroll-x="{{true}}">
+        <view class="scrollItem" wx:for="{{hotPlace}}" wx:key="{{index}}">
+          <view class='imgBox'>
+            <image src="{{item.img}}"/>
+            <view>人气第{{(index+1)}}名</view>
+          </view>
+          <view class='name ellipsis'>{{item.name}}</view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+
+  <view class='section rankList'>
+    <section-title color="#f8435e" title="精选榜单"/>
+    <view class='scrollBox'>
+      <scroll-view class="scrollList" scroll-x="{{true}}">
+        <view class="scrollItem" wx:for="{{ranking}}" wx:key="{{index}}">
+          <image src="{{item.img}}"/>
+          <view class='wrapper'>
+            <view class='ellipsis'>{{item.title}}</view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+
+  <view class='section typical'>
+    <section-title color="#01b582" title="经典玩法"/>
+    <view class='scrollBox'>
+      <scroll-view class="scrollList" scroll-x="{{true}}">
+        <view class="scrollItem" wx:for="{{typical}}" wx:key="{{index}}">
+          <image src="{{item.img}}"/>
+          <view class='ellipsis title'>{{item.title}}</view>
+          <view class='tips'>
+            <view>{{item.num}}</view>
+            <text>到访的游客选择这条线路</text>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+
+  <view class='section route'>
+    <section-title color="#2359cb" title="特惠线路"/>
+    <view class='routeList'>
+      <view class='routeItem' wx:for="{{route}}" wx:key="{{index}}">
+        <image class='left' src='{{item.img}}'/>
+        <view class='right'>
+          <text class='ellipsis-two title'>{{item.title}}</text>
+          <view class='tips'>
+            <view class='tips1'>最近有<text>{{item.num}}</text>人已经购买</view>
+            <view class='tips2'><text>{{item.price}}</text>起</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class='section otherCity'>
+    <section-title color="#323943" title="周边城市"/>
+    <view class='otherCityList'>
+      <view class='city' wx:for="{{otherCity}}" wx:key="{{index}}">
+        <image src="{{item.img}}"/>
+        <view class='name'>{{item.name}}</view>
+        <view class='away'>
+          <text>相距</text>
+          <text class='km'>{{item.km}}</text>
+          <text>公里</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class='bottomTips'>
+    想和朋友们分享这个目的地吗？立即分享
+  </view>
+</view>

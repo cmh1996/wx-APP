@@ -1,0 +1,86 @@
+/* pages/search/search.wxss */
+.searchBar{
+  width: 100%;
+  height: 100rpx;
+  background: #f9f9f9;
+  display: flex;
+  align-items: center;
+  padding: 0 30rpx;
+}
+.searchBar input{
+  background-color: #E5E5E5;
+  border-radius: 10rpx;
+  flex:1;
+  height: 60rpx;
+  padding-left: 10rpx;
+}
+.searchBar icon{
+  margin: 0 0 0 30rpx;
+}
+
+.content{
+  width: 100%;
+  height: 100%;
+  background: white;
+}
+.hot{
+  padding: 20rpx;
+}
+.hot .title{
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom: 1px solid #e0e0e0;
+}
+.hot .hotPlaces{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.hot .hotPlaces view{
+  width: 130rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  text-align: center;
+  border: 1px solid #e0e0e0;
+  border-radius: 6rpx;
+  margin-top: 30rpx;
+}
+
+.history{
+  padding: 20rpx;
+}
+.history .title{
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom: 1px solid #e0e0e0;
+}
+.history .historyPlaces{
+  width: 100%;
+}
+.history .historyPlaces view{
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.history .clearHistory{
+  width: 100%;
+  padding: 20rpx 0;
+  text-align: center;
+  border-top: 1px solid #e0e0e0;
+  color:#2dbb55;
+}
+
+.suggest{
+  width: 100%;
+  height: 100%;
+  background: white;
+}
+.suggest view{
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  padding-left: 30rpx;
+}

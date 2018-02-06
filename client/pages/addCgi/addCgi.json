@@ -1,0 +1,11 @@
+{
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#5fca9c",
+    "navigationBarTitleText": "快速添加 CGI",
+    "navigationBarTextStyle": "white",
+    "navigationStyle": "default",
+    "enablePullDownRefresh": true,
+    "onReachBottomDistance": 50,
+    "disableScroll": false 
+}

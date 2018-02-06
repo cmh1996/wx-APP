@@ -1,0 +1,32 @@
+<!--pages/me/me.wxml-->
+<view class='container'>
+  <view class='userInfo'>
+    <image src='{{userImg}}'/>
+    <text>{{userName}}</text>
+  </view>
+
+  <view class='normalBar' bindtap='chooseImg'>
+    <text>选择、预览图片测试</text><text>></text>
+  </view>
+  <view class='imgList'>
+    <view class='imgBox' wx:for="{{uploadImgList}}" wx:key="{{item}}">
+      <image data-img='{{item}}' catchtap='previewImg' src="{{item}}"/>
+      <icon type="clear" size="20" color="#f76260" catchtap='deleteImg' data-img='{{item}}'/>
+    </view>
+  </view>
+
+  <view class='normalBar'>
+    <text>录音测试</text><text>></text>
+  </view>
+  <view class='controlBox'>
+    <view catchtap='startRecord'>开始</view>
+    <view catchtap='pauseRecord' wx:if="{{!pausing}}">暂停</view>
+    <view catchtap='resumeRecord' wx:else>继续</view>
+    <view catchtap='stopRecord'>停止</view>
+    <view catchtap='playRecord' wx:if="{{recordFilePath.length>0}}">播放录音</view>
+  </view>
+
+  <view class='welcome'>
+    <text>欢迎来到旅行呱~嘎嘎嘎</text>
+  </view>
+</view>

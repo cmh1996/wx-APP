@@ -1,0 +1,371 @@
+/* pages/destination/destination.wxss */
+.header{
+  width: 100%;
+  height: 360rpx;
+}
+.header .swiperItem{
+  position: relative;
+}
+.header .swiperItem image{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.header .swiperItem .placeInfo{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding-left: 30rpx;
+  padding-bottom: 50rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  color: white;
+}
+.header .swiperItem .placeInfo .left{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.header .swiperItem .placeInfo .left .name{
+  font-size: 54rpx;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+}
+.header .swiperItem .placeInfo .left .rank{
+  background-color: #f8435e;
+  padding: 4rpx;
+  padding-left: 10rpx;
+  padding-right: 14rpx;
+  border-bottom-right-radius: 20rpx;
+  margin-bottom: 20rpx;
+}
+.header .swiperItem .placeInfo .right view{
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 8rpx;
+  padding-left: 12rpx;
+  border-top-left-radius: 30rpx;
+  border-bottom-left-radius: 30rpx;
+}
+.header .normalItem image{
+  width: 100%;
+  height: 100%;
+}
+
+.content{
+  background-color: white;
+  padding: 20rpx;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20rpx;
+  width: 100%;
+}
+.section{
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20rpx;
+  width: 100%;
+}
+
+.recently{
+  flex-direction: row;
+  align-items: center;
+  height: 80rpx;
+  margin-bottom: 0;
+}
+.recently view{
+  margin-left: 15rpx;
+  color: #1e1e1e;
+  width: 200rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  background-color: #f0f2f1;
+  border-radius: 30rpx;
+}
+
+.mainSection .item{
+  position: relative;
+  color:white;
+}
+.mainSection .item image{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.mainSection .item .tips{
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20rpx;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.mainSection .item .tips text:first-child{
+  font-size: 40rpx;
+  font-weight: bold;
+}
+.mainSection .item .tips text:last-child{
+  font-size: 30rpx;
+}
+.mainSection .top{
+  width: 100%;
+  height: 200rpx;
+  margin-bottom: 7rpx;
+}
+.mainSection .bottom{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 200rpx;
+}
+.mainSection .bottom .left{
+  width: 49.5%;
+  height: 100%;
+}
+.mainSection .bottom .right{
+  width: 49.5%;
+  height: 100%;
+}
+
+.hot .typeList{
+  padding: 0 20rpx;
+  padding-bottom: 20rpx;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.hot .typeList view{
+  width: 130rpx;
+  height: 70rpx;
+  text-align: center;
+  line-height: 70rpx;
+  font-size: 30rpx;
+  color:black;
+  border: 1px solid #e6e6e6;
+  border-radius: 8rpx;
+}
+.hot .typeList .selected{
+  color:white;
+  background-color: #ee9900;
+}
+
+.scrollBox{
+  overflow:hidden;
+  white-space:nowrap;
+}
+.hot .scrollList{
+  width: 100%;
+  height: 300rpx;
+}
+.hot .scrollList .scrollItem{
+  width: 220rpx;
+  height: 100%;
+  display: inline-block;
+  margin-left: 20rpx;
+}
+.hot .scrollList .scrollItem .imgBox{
+  width: 100%;
+  height: 220rpx;
+  position: relative;
+}
+.hot .scrollList .scrollItem .imgBox image{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.hot .scrollList .scrollItem .imgBox view{
+  padding: 4rpx;
+  color: white;
+  font-size: 20rpx;
+  background-color: #f8435e;
+  border-bottom-right-radius: 20rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.hot .scrollList .scrollItem .name{
+  width: 100%;
+  color: black;
+  font-size: 30rpx;
+  margin-top: 10rpx;
+}
+
+.rankList .scrollList{
+  width: 100%;
+  height: 200rpx;
+  margin-bottom: 20rpx;
+}
+.rankList .scrollList .scrollItem{
+  width: 300rpx;
+  height: 100%;
+  display: inline-block;
+  margin-left: 20rpx;
+  position: relative;
+}
+.rankList .scrollList .scrollItem image{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.rankList .scrollList .scrollItem .wrapper{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.rankList .scrollList .scrollItem .wrapper view{
+  width: 260rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  color: white;
+  font-size: 36rpx;
+  font-weight: bold;
+  text-align: center;
+}
+
+.typical .scrollList{
+  width: 100%;
+  height: 460rpx;
+}
+.typical .scrollList .scrollItem{
+  width: 600rpx;
+  height: 100%;
+  display: inline-block;
+  margin-left: 20rpx;
+}
+.typical .scrollList .scrollItem image{
+  width: 100%;
+  height: 300rpx;
+  display: block;
+  margin-bottom: 20rpx;
+}
+.typical .scrollList .scrollItem .title{
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  display: block;
+  color: black;
+  font-size: 34rpx;
+}
+.typical .scrollList .scrollItem .tips{
+  width: 100%;
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+}
+.typical .scrollList .scrollItem .tips view{
+  width: 60rpx;
+  height: 40rpx;
+  color: white;
+  background-color: #ec9b00;
+  text-align: center;
+  line-height: 40rpx;
+}
+.typical .scrollList .scrollItem .tips text{
+  margin-left: 10rpx;
+}
+
+.routeList{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 20rpx 20rpx;
+}
+.routeList .routeItem{
+  width: 100%;
+  height: 200rpx;
+  display: flex;
+  justify-content: space-between;
+  margin: 20rpx 0;
+  border-bottom: 2rpx solid #f6f6f6;
+}
+.routeList .routeItem .left{
+  width: 230rpx;
+  height: 100%;
+}
+.routeList .routeItem .right{
+  width: 450rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.routeList .routeItem .right .title{
+  color: black;
+  font-size: 32rpx;
+}
+.routeList .routeItem .right .tips{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 40rpx;
+  align-items: flex-end;
+}
+.routeList .routeItem .right .tips .tips1{
+
+}
+.routeList .routeItem .right .tips .tips1 text{
+  color: orange;
+}
+.routeList .routeItem .right .tips .tips2{
+
+}
+.routeList .routeItem .right .tips .tips2 text{
+  color: orangered;
+  font-size: 34rpx;
+}
+
+
+.otherCity .otherCityList{
+  width: 100%;
+  padding: 20rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.otherCity .otherCityList .city{
+  width: 225rpx;
+  height: 330rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.otherCity .otherCityList .city image{
+  width: 100%;
+  height: 220rpx;
+}
+.otherCity .otherCityList .city .name{
+  color: black;
+  font-size: 32rpx;
+}
+.otherCity .otherCityList .city .away .km{
+  color: #ee9f08;
+}
+.bottomTips{
+  width: 100%;
+  height: 100rpx;
+  text-align: center;
+  line-height: 90rpx;
+  font-size: 28rpx;
+  color: #747675;
+}

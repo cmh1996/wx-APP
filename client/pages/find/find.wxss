@@ -1,0 +1,226 @@
+/* pages/find/find.wxss */
+.findTop{
+  width: 100%;
+  height: 400rpx; 
+  position: relative;
+  background-color: #3c87b6;
+}
+.findTop .bg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 95%;
+  background-image: url(https://gw.alicdn.com/imgextra/i2/6000000002937/TB2iTZQtSFjpuFjSspbXXXagVXa_!!0-travel.jpg_760x760q50.jpg_.webp);
+  filter: blur(10rpx); 
+  z-index: 0;
+}
+.findTop .btnList{
+  width: 100%;
+  display: flex;
+  height: 180rpx;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  top: 0;
+}
+.findTop .btnList .btnItem{
+  width: 140rpx;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.findTop .btnList .btnItem image{
+  width: 60rpx;
+  height: 60rpx;
+  margin-bottom: 10rpx;
+}
+.findTop .btnList .btnItem text{
+  font-size: 30rpx;
+}
+.scrollBox{
+  overflow:hidden;
+  white-space:nowrap;
+  margin-top: 180rpx;
+}
+.findTop .scrollList{
+  width: 100%;
+  height: 200rpx;
+}
+.findTop .scrollList .scrollItem{
+  width: 330rpx;
+  height: 200rpx;
+  position: relative;
+  display: inline-block;
+  margin-left: 10rpx;
+}
+.findTop .scrollList .scrollItem image{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 40rpx;
+}
+
+.bar{
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  padding-left: 30rpx;
+  background: white;
+}
+.bar view{
+  font-size: 36rpx;
+  color:#1e1e1e;
+  font-weight: 600;
+  padding-left: 30rpx;
+  border-left: 4rpx solid #1e1e1e;
+  height: 40rpx;
+  flex: 1;
+}
+
+.feedList{
+  display: flex;
+  flex-direction: column;
+}
+.feedList .content{
+  width: 100%;
+  margin-top: 16rpx;
+  background: white;
+  padding: 20rpx;
+  display: flex;
+  flex-direction: column;
+}
+.feedList .topic{
+
+}
+.feedList .topic image{
+  width: 100%;
+  height: 300rpx;
+}
+.feedList .topic .title{
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.feedList .topic .title .text{
+  font-weight: 600;
+  color: black;
+  font-size: 38rpx;
+  width: 600rpx;
+  height: 50rpx;
+}
+.feedList .topic .title .type{
+  background-color: #f0f2f1;
+  padding: 8rpx;
+}
+.feedList .topic .intro{
+  line-height: 1.7em;
+  font-size: 30rpx;
+}
+.feedList .article .title{
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.feedList .article .title .text{
+  font-weight: 600;
+  color: black;
+  font-size: 38rpx;
+  width: 600rpx;
+  height: 50rpx;
+}
+.feedList .article .title .type{
+  background-color: #f54f00;
+  padding: 8rpx 14rpx;
+  color:white;
+  height: 50rpx;
+  position: relative;
+  right: -20rpx;
+}
+.feedList .article .sub{
+  display: flex;
+  width: 100%;
+  height: 220rpx;
+  justify-content: space-between;
+}
+.feedList .article .sub image{
+  width: 300rpx;
+  height: 100%;
+  margin-right: 30rpx;
+}
+.feedList .article .sub view{
+  flex:1;
+  height: 100%;
+  line-height: 1.7em;
+  font-size: 32rpx;
+  color: #676767;
+}
+.feedList .article .tips{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30rpx;
+}
+.feedList .article .tips .author{
+  background-color: #f0f2f1;
+  padding: 8rpx;
+}
+.feedList .article .tips .data{
+  font-size: 26rpx;
+}
+.feedList .userFeed .userInfo{
+  width: 100%;
+  height: 60rpx;
+  display: flex;
+}
+.feedList .userFeed .userInfo image{
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+}
+.feedList .userFeed .userInfo view{
+  margin-left: 20rpx;
+  width: 500rpx;
+  height: 50rpx;
+}
+.feedList .userFeed .intro{
+  width: 100%;
+  height: 160rpx;
+  line-height: 1.7em;
+  font-size: 32rpx;
+  color: #676767;
+}
+.feedList .userFeed .imgBox{
+  margin-top: 30rpx;
+  display: flex;
+  width: 100%;
+  height: 240rpx;
+}
+.feedList .userFeed .imgBox image{
+  width: 33%;
+  height: 100%;
+  margin-left: 10rpx;
+}
+.feedList .userFeed .imgBox image:first-child{
+  margin-left: 0;
+}
+.feedList .userFeed .tips{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30rpx;
+}
+.feedList .userFeed .tips .author{
+  background-color: #f0f2f1;
+  padding: 8rpx;
+}
+.feedList .userFeed .tips .info{
+  font-size: 26rpx;
+}

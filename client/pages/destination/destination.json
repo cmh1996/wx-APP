@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "目的地",
+  "usingComponents": {
+    "section-title": "../../components/SectionTitle/SectionTitle"
+  }
+}

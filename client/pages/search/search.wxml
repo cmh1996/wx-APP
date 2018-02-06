@@ -1,0 +1,48 @@
+<!--pages/search/search.wxml-->
+<view class='container' style="height:{{clientHeight}}">
+  <view class='searchBar'>
+    <input
+      value=""
+      type='text'
+      placeholder='请输入旅行目的地'
+      disabled='{{false}}'
+      maxlength='{{10}}'
+      focus='{{false}}'
+      confirm-type='搜索'
+      bindinput='setValue'
+      bindconfirm='searchConfirm'
+    />
+    <icon type="search" size="22" 
+  color='#53c673' bindtap="searchConfirm"/>
+  </view>
+
+  <view class='content' wx:if="{{suggestPlaces.length<=0}}">
+    <view class='hot'>
+      <view class='title'>热门搜索</view>
+      <view class='hotPlaces'>
+        <view wx:for="{{hotPlaces}}" wx:key="{{index}}" data-place='{{item}}' bindtap="searchDirectly">
+          {{item}}
+        </view>
+      </view>
+    </view>
+
+    <view class='history'>
+      <view class='title'>历史搜索</view>
+      <view class='historyPlaces'>
+        <view wx:for="{{historyPlaces}}" wx:key="{{index}}" data-place='{{item}}' bindtap="searchDirectly">
+          {{item}}
+        </view>
+      </view>
+      <view class='clearHistory' bindtap='clearHistory' wx:if="{{historyPlaces.length>0}}">
+      清除历史
+      </view>
+    </view>
+  </view>
+  <view class='suggest' wx:else>
+    <view class='suggestPlaces'>
+      <view wx:for="{{suggestPlaces}}" wx:key="{{index}}" data-place='{{item}}' bindtap="searchDirectly">
+        {{item}}
+      </view>
+    </view>
+  </view>
+</view>

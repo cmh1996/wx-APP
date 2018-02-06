@@ -1,0 +1,151 @@
+<!--index.wxml-->
+<view class='container'>
+  <view class='header'>
+    <navigator url="../search/search" open-type="navigate" class='searchBar'>
+        <icon type="search" size='16'/>
+        <text>赶快输入目的地~</text>
+    </navigator>
+  </view>
+
+  <view class='container content'>
+    <swiper class='bannerSwiper' indicator-dots="{{true}}" indicator-color="rgba(255,255,255,0.3)" indicator-active-color="#5fca9c"
+      autoplay="{{true}}" interval="6000" duration="500" circular="{{true}}" >
+      <block wx:for="{{bannerUrls}}" wx:key="{{index}}">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image"/>
+        </swiper-item>
+      </block>
+    </swiper>
+
+    <view class='types'>
+      <block wx:for="{{types}}" wx:key="{{index}}">
+        <view class='typeItem'>
+          <image src="{{item.imgUrl}}"/>
+          <text>{{item.title}}</text>
+        </view>
+      </block>
+    </view>
+
+    <view class='obSupermarket'>
+      <view class='obHeader'>
+        <view class='left'>
+          <view class='logo'></view>
+          <text>一站汇集全球玩乐</text>
+        </view>
+        <text class='right'>更多 ></text>
+      </view>
+      <view class='obContent'>
+        <block wx:for="{{obSupermarket}}" wx:key="{{index}}">
+          <view><text>{{item}}</text></view>
+        </block>
+      </view>
+    </view>
+
+    <view class='headlines'>
+      <view class='logo'>
+      </view>
+      <swiper class='headlineSwiper' indicator-dots="{{false}}" autoplay="{{true}}" interval="8000" duration="500" circular="{{true}}" vertical="{{true}}">
+      <block wx:for="{{headlines}}" wx:key="{{item.title1}}">
+        <swiper-item>
+          <view class='headline'>
+            <view>{{item.tips1}}</view>
+            <text class='ellipsis'>{{item.title1}}</text>
+          </view>
+          <view class='headline'>
+            <view>{{item.tips2}}</view>
+            <text class='ellipsis'>{{item.title2}}</text>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+    </view>
+
+    <view class='barginPrice'>
+      <view class='hotSale'>
+        <view class='title'></view>
+        <text class='name'>特价！昆大丽6天5晚含机票品质跟团游</text>
+        <view class='price'>1780元 Go></view>
+      </view>
+      <view class="ticket ticket1">
+        <text class="title">冬季出行</text>
+        <text class="tips">特价1折起</text>
+      </view>
+      <view class="ticket ticket2">
+        <text class="title">吃喝玩乐尽在酒店</text>
+        <text class="tips">NEW</text>
+      </view>
+    </view>
+    
+    <view class='section firstStation'>
+      <section-title color="#fea000" title="全球第一站"/>
+      <view class='contentWrapper'>
+        <view class='hot'>
+          <view class='hotLeft'>
+            <view class='tips'>推荐</view>
+            <text class='text'>沉醉冰岛极光，初遇冰与火之国</text>
+            <hr/>
+            <text class='people'>1人说好</text>
+          </view>
+          <image src="https://gw.alicdn.com/imgextra/i2/6000000000903/TB2gYJ7nMoQMeJjy1XaXXcSsFXa_!!0-travel.jpg_500x500q75.jpg_.webp" class='hotRight'/>
+        </view>
+        <view class='stations'>
+          <view class='stationItem' wx:for="{{station}}" wx:key="{{index}}">
+            <view class='stationImg'>
+              <image src="{{item.img}}"/>
+              <view>{{item.name}}</view>
+            </view>
+            <view class='stationTitle ellipsis-two'>{{item.intro}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class='section randomPlace'>
+      <section-title color="#5ee609" title="旅行任意门"/>
+      <view class='contentWrapper'>
+        <view class='placeItem' wx:for="{{randomPlace}}" wx:key="{{index}}">
+          <image src='{{item.img}}'/>
+          <text class='title'>{{item.name}}</text>
+          <text class='tips ellipsis'>{{item.intro}}</text>
+        </view>
+      </view>
+    </view>
+
+    <view class='section hotPlace'>
+      <section-title color="#01b551" title="热门目的地"/>
+      <view class='contentWrapper'>
+        <view class='placeItem left'>
+          <image src='https://gw.alicdn.com/tfs/TB1xVsifgoQMeJjy0FpXXcTxpXa-116-128.jpg_400x400q75.jpg_.webp'/>
+          <view class='bg'></view>
+          <text class='placeName'>三亚</text>
+          <text class='placeNum'>90.1万人去过</text>
+        </view>
+        <view class='right'>
+          <view class='placeItem' wx:for="{{hotPlace}}" wx:key="{{index}}">
+            <image src='{{item.img}}'/>
+            <view class='bg'></view>
+            <text class='placeName'>{{item.name}}</text>
+            <text class='placeNum'>{{item.num}}万人去过</text>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class='section like'>
+      <section-title color="#fd8c26" title="猜你喜欢"/>
+      <view class='contentWrapper'>
+        <view class='likeItem' wx:for="{{youlike}}" wx:key="{{index}}">
+          <view class='imgBox'>
+            <image src='{{item.img}}'/>
+            <view class='type'>{{item.type}}</view>
+          </view>
+          <view class='title ellipsis-two'>{{item.title}}</view>
+          <view class='info'>
+            <text class='price'>¥{{item.price}}</text>
+            <text class='num'>{{item.peopleNum}}人购买</text>
+          </view>
+        </view>
+      </view>
+    </view>
+</view>
+</view>
